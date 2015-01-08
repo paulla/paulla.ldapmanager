@@ -25,18 +25,19 @@ setup(name='paulla.ldapmanager',
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
         ],
-      author='',
-      author_email='',
-      url='',
-      keywords='web pyramid pylons',
+      author='Voileux',
+      author_email='voileux@paulla.asso.fr',
+      url='https://github.com/paulla/paulla.ldapmanager',
+      keywords='web pyramid ldap manager',
       packages=find_packages(),
       include_package_data=True,
+      namespace_packages=['paulla'], 
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
-      test_suite="paullaldapmanager",
+      test_suite="paulla.ldapmanager",
       entry_points="""\
       [paste.app_factory]
-      main = paullaldapmanager:main
+      main = paulla.ldapmanager:main
       """,
       )
