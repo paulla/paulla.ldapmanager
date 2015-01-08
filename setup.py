@@ -11,9 +11,14 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 requires = [
     'pyramid',
     'pyramid_chameleon',
+    'pyramid_fanstatic',
+    'rebecca.fanstatic',
     'pyramid_debugtoolbar',
     'waitress',
+    'js.bootstrap',
+    'css.fontawesome',
     ]
+
 
 setup(name='paulla.ldapmanager',
       version='0.0',
