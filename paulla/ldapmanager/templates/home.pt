@@ -20,8 +20,7 @@
 
           <div class="col-md-3">
           	<ul class="nav nav-pills nav-stacked">
-  			<li> Ajouter d'une fiche </li>
-			<li> Modifier une fiche </li>
+  			<li> <a href="${request.route_path('add')}">Ajouter d'une fiche </a></li> <!-- permet de chercher le path vers la route add -->
 		</ul>
           </div> <!-- fin de col-md-3 -->
     
