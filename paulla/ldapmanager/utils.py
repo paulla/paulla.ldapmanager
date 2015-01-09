@@ -10,16 +10,16 @@ if not os.path.isfile(filename):
 config = SafeConfigParser()
 config.read(filename)
 config_dict = dict(config.items('ldap'))
+
 #print config_dict('uri')
 
 
 
 def connect():
-    import ldap    
-    l = ldap.initialize(config_dict('uri'))
+    l = ldap.initialize(config_dict['uri'])
         
     method = ldap.AUTH_SIMPLE
-    l.bind(config_dict('rootdn'), config_dict('password'), config_dict('method'))
+    l.bind(config_dict['rootdn'], config_dict['password'], method)
     return l
 
 
@@ -30,7 +30,7 @@ def find_entries(search_base, search_filter):
     search_scope = ldap.SCOPE_SUBTREE
 
     try:
-        return l.search_s(search_base, search_scope, search_filter)
+        return l.search_s(search_base+config_dict['basedn'], search_scope, search_filter)
     except ldap.LDAPError, e:
 	    print e
 
