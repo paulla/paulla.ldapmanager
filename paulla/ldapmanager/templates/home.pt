@@ -28,6 +28,7 @@
             <div class="row">
             	<div class="col-md-10">
 			<p> nom de la fiche User </p>
+			<ul><li tal:repeat="user users">${user[1]['sn'][0]}</li></ul>	
 		</div> <!-- fin de col-md-10 -->
 		<div class="col-md-1">
 			<p> M</p>
